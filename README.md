@@ -9,7 +9,7 @@ kubectl create namespace ceph
 ## 修改csi-rbd-secret.yaml
 将userID和userKey修改为您的ceph集群认证信息
 ## 修改csi-rbd-sc.yaml
-将clusterID修改为您的ceph集群fsid
+将clusterID修改为您的ceph集群fsid，pool为您的ceph资源池名称，imageFeatures根据您的内核版本选择，一般为layering无需更改
 ## 创建StorageClass
 ```bash
 kubectl -n ceph create -f .
