@@ -1,5 +1,5 @@
 # ceph-csi-deploy
-一个cephrbd和kubernetes StorageClass集成示例
+一个cephrbd和kubernetes StorageClass集成示例，需要ceph集群提前创建供kubernetes使用的资源池
 ## 创建命名空间
 ```bash
 kubectl create namespace ceph
