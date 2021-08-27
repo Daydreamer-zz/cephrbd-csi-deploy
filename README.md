@@ -14,6 +14,11 @@ kubectl create namespace ceph
 ```bash
 kubectl -n ceph create -f .
 ``` 
+## 设置为默认StorageClass（可选）
+如果需要配置为默认的StorageClass，请执行
+```bash
+kubectl patch storageclass csi-rbd-sc -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+```
 ## 测试pvc
 ```yaml
 apiVersion: v1
